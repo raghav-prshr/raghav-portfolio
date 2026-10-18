@@ -12,5 +12,5 @@ export interface ResumeConfig {
 
 export const resume: ResumeConfig = {
   label: "Resume",
-  href: "",
+  href: "/resume.pdf",
 };
