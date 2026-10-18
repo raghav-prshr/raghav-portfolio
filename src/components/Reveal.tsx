@@ -1,0 +1,23 @@
+import type { ReactNode } from "react";
+import { motion } from "framer-motion";
+
+interface RevealProps {
+  children: ReactNode;
+  delay?: number;
+  className?: string;
+}
+
+/** Fade/slide in once when scrolled into view. Honours prefers-reduced-motion via MotionConfig. */
+export function Reveal({ children, delay = 0, className }: RevealProps) {
+  return (
+    <motion.div
+      className={className}
+      initial={{ opacity: 0, y: 18 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{ duration: 0.45, delay, ease: "easeOut" }}
+    >
+      {children}
+    </motion.div>
+  );
+}
