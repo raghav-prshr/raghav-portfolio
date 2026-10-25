@@ -10,7 +10,6 @@ export type ChannelKind = "external" | "mailto" | "file";
 export interface ContactChannel {
   id: string;
   label: string;
-  /** 1–2 characters shown in the inventory-style slot. */
   glyph: string;
   href: string;
   display: string;
@@ -37,10 +36,6 @@ function socialChannel(social: SocialLink): ContactChannel | null {
   };
 }
 
-/**
- * Single source of truth for contact actions (used by the Contact section and
- * the terminal). Only channels with valid details are returned; nothing is invented.
- */
 export function getContactChannels(): ContactChannel[] {
   const channels: ContactChannel[] = contact.socials
     .map(socialChannel)

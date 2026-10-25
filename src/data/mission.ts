@@ -1,6 +1,5 @@
 import type { CurrentMission } from "../types";
 
-/** Which entry in src/data/projects.ts this mission belongs to. */
 export const missionProjectId = "codeatlas";
 
 /*
@@ -24,5 +23,5 @@ export const currentMission: CurrentMission = {
   objective: "TODO: what this mission is for, in one or two sentences.",
   status: "TODO: current status",
   tasks: [{ label: "Design UI/UX", done: false }],
-  // progress: 40,
+   progress: 40,
 };

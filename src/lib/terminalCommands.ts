@@ -1,8 +1,3 @@
-/*
- * Pure, read-only command interpreter for the portfolio terminal.
- * It only reads src/data/* configuration. It never runs shell commands,
- * never uses eval/Function, and never touches the filesystem or network.
- */
 import { currentMission, missionProjectId } from "../data/mission";
 import { contact, player, site } from "../data/profile";
 import { projects } from "../data/projects";
@@ -16,7 +11,6 @@ export type LineTone = "out" | "muted" | "accent" | "error" | "input";
 export interface TerminalLine {
   tone: LineTone;
   text: string;
-  /** Optional link rendered after `text`. Only http(s) and mailto: are ever produced. */
   href?: string;
   hrefLabel?: string;
 }
@@ -186,7 +180,6 @@ function closest(name: string): string | undefined {
   return best;
 }
 
-/** Tab completion: returns the command name only when the prefix is unambiguous. */
 export function completeCommand(input: string): string | null {
   const prefix = input.trim().toLowerCase();
   if (!prefix || /\s/.test(prefix)) return null;

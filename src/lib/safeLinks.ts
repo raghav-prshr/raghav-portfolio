@@ -2,7 +2,6 @@ import { isPlaceholder } from "./placeholder";
 
 const EMAIL_RE = /^[^\s@<>"']+@[^\s@<>"']+\.[^\s@<>"']+$/;
 
-/** Returns a normalised http(s) URL, or null for anything else (TODO, empty, javascript:, ...). */
 export function externalUrl(value: string | undefined | null): string | null {
   if (!value || isPlaceholder(value)) return null;
   try {
@@ -14,7 +13,6 @@ export function externalUrl(value: string | undefined | null): string | null {
   }
 }
 
-/** Accepts a site-relative asset path such as "/resume.pdf" (file placed in /public). */
 export function localAssetPath(value: string | undefined | null): string | null {
   if (!value || isPlaceholder(value)) return null;
   const path = value.trim();
@@ -22,14 +20,12 @@ export function localAssetPath(value: string | undefined | null): string | null 
   return path;
 }
 
-/** Returns a plausible email address, or null. */
 export function emailAddress(value: string | undefined | null): string | null {
   if (!value || isPlaceholder(value)) return null;
   const email = value.trim();
   return EMAIL_RE.test(email) ? email : null;
 }
 
-/** "https://www.github.com/user/" → "github.com/user" */
 export function displayUrl(href: string): string {
   try {
     const url = new URL(href);

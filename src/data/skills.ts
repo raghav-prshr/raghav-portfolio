@@ -1,6 +1,5 @@
 import type { InventoryCategory } from "../types";
 
-/** Skill descriptions reflect current learning/work, not invented proficiency scores. */
 export const inventory: InventoryCategory[] = [
   {
     id: "languages", label: "Programming", accent: "green",

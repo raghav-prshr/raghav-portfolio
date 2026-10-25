@@ -1,6 +1,5 @@
 import type { SectionDef } from "../types";
 
-/** Order here = order on the page = order in the nav and main menu. */
 export const sections: SectionDef[] = [
   { id: "player", number: "01", label: "Player Profile", menuLabel: "Player", hint: "Who is behind the controller" },
   { id: "inventory", number: "02", label: "Skills Inventory", menuLabel: "Inventory", hint: "Tools and tech equipped" },

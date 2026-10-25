@@ -24,7 +24,7 @@ export const player: PlayerProfile = {
   ],
   facts: [
     { label: "Education", value: "B.Tech · Computer Science and Engineering" },
-    { label: "Institution", value: "Manav Rachna International Institute Of Research And Studies" },
+    { label: "Institution", value: "Manav Rachna International Institute Of Research & Studies" },
     { label: "Focus", value: "Java · C++ · Backend · Databases · DSA · Competitive Programming" },
     { label: "Current goal", value: "Prepare for software engineering internships" },
   ],
