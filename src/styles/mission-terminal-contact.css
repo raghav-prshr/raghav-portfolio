@@ -1,9 +1,3 @@
-/* ═════════════════════════════════════════════════════════════
-   Group 3: Current Mission, Terminal, Contact + responsive polish.
-   Loaded after global.css / components.css, so same-specificity
-   rules here intentionally win.
-   ═════════════════════════════════════════════════════════════ */
-
 .sr-only {
   position: absolute;
   width: 1px;
