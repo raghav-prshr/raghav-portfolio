@@ -23,5 +23,5 @@ export const currentMission: CurrentMission = {
   objective: "TODO: what this mission is for, in one or two sentences.",
   status: "TODO: current status",
   tasks: [{ label: "Design UI/UX", done: false }],
-   progress: 40,
+   progress: 4,
 };
